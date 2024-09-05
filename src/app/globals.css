@@ -1,0 +1,629 @@
+@import url('https://fonts.cdnfonts.com/css/ms-reference-sans-serif');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+:root {
+  --primary-color: #64B5F6;
+  --background-color: #F7FCFF;
+  --dark-color: #000000;
+  --buttons-color: #EC6F53;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.conteiner{
+  max-width: 120rem;
+  margin: 0 auto;    
+} 
+
+.conteiner-azul {
+  background-color: var(--primary-color);
+  position: fixed;
+  width: 100%;
+  height: 39px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.conteiner-hero {
+  background-color: var(--background-color);
+  width: 100%;
+  margin-top: 39px;
+  position: relative;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 1.2rem 2.2rem 0.8rem 1.8rem;
+  height: 100%;
+}
+
+
+.conteiner-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.logo-reloj {
+  width: 3.1rem;
+}
+
+.logo-nombre a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+}
+
+.conteiner-registro {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Mueve el contenedor de registro a la derecha */
+}
+
+.registro-texto {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color : var(--primary-color);
+  font-family: 'Oswald', sans-serif;
+  transition: text-decoration 0.3s ease; /* Añade una transición suave */
+}
+
+.registro-texto a {
+  text-decoration: none; /* Elimina la decoración del enlace por defecto */
+  color: inherit; /* Hereda el color del contenedor */
+}
+
+.registro-texto:hover {
+  text-decoration: underline; /* Agrega subrayado al pasar el cursor */
+}
+
+.p1-titulo {
+  background-color: var(--background-color);
+  font-family: 'MS Reference Sans Serif', sans-serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 0;
+}
+
+.titulo-busqueda {
+  font-size: 2.4rem;
+  text-align: center;
+  color: var(--dark-color);
+}
+
+.conteiner-navbar-search {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.search-form {
+  display: flex;
+  border: 1px solid var(--primary-color);
+  border-radius: 3px;
+  overflow: hidden;
+  width: 94%;
+}
+
+.search-input {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  flex-grow: 1;
+}
+
+.search-input::placeholder {
+  color: var(--dark-color);
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.search-lupita {
+  width: auto;
+}
+
+/* Estilos adicionales para ocultar la lupa en foco */
+.search-input:focus ~ .search-button {
+  display: none;
+}
+
+.restaurant-list {
+  background-color:  var(--background-color);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+}
+
+/* styles.css */
+
+.restaurante-principal {
+  background-color:  var(--background-color);
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.restaurante-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.restaurante-imagen {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.restaurante-principal:hover .restaurante-imagen {
+  transform: scale(1.05);
+}
+
+.restaurante-nombre {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color:  white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/*registerModal*/
+/* globals.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background:  white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 85%;
+}
+
+.modal-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-header h2 {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  flex-grow: 1; /* Hace que el h2 tome el espacio disponible */
+}
+.modal-header button {
+  border:none;
+  background-color: var(--background-color);
+  cursor: pointer;
+  margin-bottom: 2.4rem;
+  margin-left: 2.6rem;
+}
+
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: 'MS Reference Sans Serif', sans-serif;
+}
+
+.modal-body input {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-body button {
+  background: var(--buttons-color);
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Actor", sans-serif;
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-body p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/*logInModal*/
+
+
+.modal-content-login {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 500px;
+  width: 85%;
+}
+
+.modal-header-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-content-login h2{
+  flex-grow: 1; /* Hace que el h2 tome el espacio disponible */
+  text-align: center; /* Centra el texto dentro de su propio contenedor */
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.modal-body-login form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'MS Reference Sans Serif', sans-serif;
+}
+
+.modal-body-login form input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-body-login form button {
+  padding: 10px;
+  background: #ff7043;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Actor", sans-serif;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-header-login button {
+  border:none;
+  background-color: var(--background-color);
+  cursor: pointer;
+  margin-bottom: 2.4rem;
+  margin-left: 2.6rem;
+}
+
+/*estilos para [id], o sea home de cada restaurante*/
+
+.conteiner {
+  background-color: var(--background-color);
+}
+.conteiner-imagen-resto {
+  display: flex;
+  justify-content: center;
+  justify-content: center; /* Apila los elementos verticalmente */
+  padding: 0.2rem 0;
+  align-items: center;
+}
+.imagen-resto {
+  width: 82%;
+  aspect-ratio: 53 / 25;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  align-self: center;
+  object-fit: cover;
+}
+.conteiner-nombre-resto { 
+  display: flex;
+  justify-content: center;
+}
+.nombre-resto {
+  padding: 0.6rem;
+  letter-spacing: 0.08em; 
+  font-weight:lighter;
+  font-size: 5.4vw;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.conteiner-ubicacion{
+  display: flex;
+  max-width: 100%;
+  justify-content: left;
+  align-items: center;
+  padding: 0.6rem 9% 1.4rem 9%;
+  gap: 1rem;
+}
+.conteiner-rango-precio{
+  display: flex;
+  max-width: 100%;
+  justify-content: left;
+  align-items:center;
+  padding: 0.4rem 4.9% 0.4rem 4.9%;
+  gap: 0.7rem;
+}
+
+.ubicacion, .rango-precio{
+  font-size: 4.4vw;
+  font-family: "MS Reference Sans Serif";
+}
+
+.ubicacion{
+  margin-right: 6rem;
+}
+
+.conteiner-reservar-button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 1.6rem 0;
+}
+
+.reservar-button{
+  background-color: var(--buttons-color);
+  color: var(--background-color);
+  font-family: "Actor", sans-serif;
+  letter-spacing: 0.06em;
+  font-style: normal;
+  border: none;
+  border-radius: 10px;
+  width: 76.6%;
+  padding: 1.25rem 0;
+  cursor: pointer;
+  font-size: 5.4vw;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 1.7rem 0 1.7rem 0;
+}
+.nav-sections hr{
+  height: 0.3px; /* Establece la altura de la línea */
+  background-color: rgb(175, 167, 167); /* Establece el color de fondo de la línea */
+  border: none; /* Elimina cualquier borde preexistente */
+  width: 100%;
+  margin: 0.8rem 0;
+}
+.nav-sections{
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.nav-links{
+  display: flex;
+  flex-direction: row; /* Organiza los enlaces en fila */
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link{
+  color: var(--dark-color); /* Color del texto */
+  text-decoration: none; /* Remover subrayado de los enlaces */
+  margin: 0 8.4vw; /* Espaciado horizontal entre los enlaces */
+  font-size: 4.6vw;
+}
+
+.section-content-nosotros , .section-content-menu, .section-content-resenas{
+  margin: 0 1.5vw; 
+}
+
+.section-content-nosotros h1 {
+  margin: 2.9vw 1.5vw 2.6vw 1.5vw; /* Espacio a la izquierda de los h1 */
+  font-size: 4.8vw;
+}
+
+.section-content-nosotros span {
+  display: block; /* Coloca los span en bloque para que estén uno debajo del otro */
+  margin: 2.8vw 3.5vw 2.8vw 3.5vw; /* Espacio a la izquierda de los span */
+  font-size: 4.4vw;
+}
+
+/*CSS MENU COMPONENT*/
+.section-content-menu h1{
+  margin: 2.9vw 1.5vw 2.6vw 1.5vw; /* Espacio a la izquierda de los h1 */
+  font-size: 4.8vw;
+}
+
+.plato {
+  display: flex;
+  flex-direction: column;
+}
+
+.plato > span:first-child {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.descripcion {
+  font-size: 14px;
+  color: #555;
+}
+
+.mas-info-btn {
+  background: none;
+  border: none;
+  color: #007BFF;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 8px;
+  padding: 0;
+}
+
+.mas-info-btn:hover {
+  text-decoration: underline;
+}
+
+.info {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.info-box {
+  display: flex;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 83.3%;
+  height: 53.5%;
+  transform: translate(-50%, -50%);
+  background-color: gray;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 999;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.box-foto-plato {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.box-plato {
+  margin-bottom: 10px;
+  font-size: 5vw;
+}
+
+.box-info-plato {
+  margin-bottom: 20px;
+  font-size: 4vw;
+}
+
+.agregar-al-pedido-btn {
+  background-color: var(--buttons-color);
+  color: var(--background-color);
+  font-family: "Actor", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  font-style: normal;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  object-fit: cover;
+  font-size: 4vw;
+  max-width: 80%;
+}
+
+.show {
+  pointer-events: auto;
+  opacity:1;
+}
+
+.info-box{
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  width: 83%;
+  padding: 5% 5% 8% 5%;
+  margin: auto;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.info-box h1{
+  font-size: 4.8vw;
+  font-weight: 100;
+}
+
+.info-box p{
+  font-size: 3.8vw;
+  padding: 10px; 
+}
+
+.agregar-al-pedido-btn {
+  display: block;
+  background-color: var(--buttons-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--background-color);
+  font-family: "Actor", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  font-style: normal;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  object-fit: cover;
+  font-size: 4vw;
+  max-width: 80%;
+}
+
+.agregar-al-pedido-btn:hover {
+  background: darken(var(--buttons-color), 10%);
+}
+
+.close-info-box{
+  position: absolute;
+  background-color: var(--background-color);
+  font-weight: 550;
+  font-size: 4.5vw;
+  border: none;
+  object-fit: cover;
+  cursor: pointer;
+  align-self: flex-end;
+  top: 0;
+  padding-left: 95%;
+}
+.box-foto-plato {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 50%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+}

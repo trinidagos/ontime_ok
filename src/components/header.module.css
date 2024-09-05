@@ -1,0 +1,42 @@
+.conteinerAzul {
+    background-color: var(--primary-color);
+    position: fixed;
+    width: 100%;
+    height: 39px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .conteinerHero {
+    background-color: var(--background-color);
+    width: 100%;
+    margin-top: 39px;
+    position: relative;
+  }
+  
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 1.2rem 2.2rem 0.8rem 1.8rem;
+    height: 100%;
+  }
+  
+  
+  .conteinerLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .logoReloj {
+    width: 3.1rem;
+  }
+  
+  .logoNombre a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+  }

@@ -1,0 +1,91 @@
+/* BookingModal.module.css */
+.modal {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: auto;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  
+  .navButton, .navButtonDisabled {
+    background: #e0f0ff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .navButtonDisabled {
+    cursor: not-allowed;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  
+  .gridItem {
+    width: 40px;
+    height: 40px;
+    background: #84c0ff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .timeGrid {
+    text-align: left;
+  }
+  
+  .timeGrid h3 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .confirmContainer {
+    margin-top: 16px;
+  }
+  
+  .confirmButton {
+    width: 100%;
+    background: #ff6f61;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  

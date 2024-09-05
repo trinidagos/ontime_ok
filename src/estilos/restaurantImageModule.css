@@ -1,0 +1,17 @@
+/* RestaurantImage.module.css */
+.conteinerImagenResto {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 0.2rem 0;
+  }
+  
+  .imagenResto {
+    width: 82%;
+    max-height: 160px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    align-self: center;
+  }
+  
